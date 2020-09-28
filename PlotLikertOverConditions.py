@@ -16,7 +16,7 @@ pd.options.mode.chained_assignment = None  # default='warn'
 sns.set_style("whitegrid")
 mpl.rc("savefig", dpi=150)
 
-def PlotLikertOverConditions(tb,nPoint,customLikertRange=None,tb2=None,customLikertRange2=None):
+def PlotLikertOverConditions(tb,nPoint,customLikertRange=None,tb2=None,customLikertRange2=None, figsize=(10,8)):
     # This functions gets a table of questions and their responces in likert scale (1:positive N:negative) as coulmns, as well as a another column indicating the condition of the responce
     # This function can also get another table for general questions after all conditions
     
@@ -32,7 +32,7 @@ def PlotLikertOverConditions(tb,nPoint,customLikertRange=None,tb2=None,customLik
     font1 = {'family': 'sans-serif','color':  'white','weight': 'normal','size': 10,}
     font2 = {'family': 'sans-serif','color':  'grey','weight': 'normal','size': 8,}
     LikertRange=[1,2,3,4,5]
-    fig, ax = plt.subplots(1, 1,figsize=(10,8))
+    fig, ax = plt.subplots(1, 1,figsize=figsize)
     
     
     ##--------------------------------------------------------------------
