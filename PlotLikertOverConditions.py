@@ -47,7 +47,7 @@ def PlotLikertOverConditions(tb,nPoint,customLikertRange=None,tb2=None,customLik
         
    
     conds=[]
-    for cond in df['condition'].unique():
+    for cond in sorted(df['condition'].unique()):
         conds.append(cond)
         temp=df[df['condition']==cond]
         temp.drop('condition', axis=1,inplace=True)
